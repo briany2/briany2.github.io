@@ -1,7 +1,188 @@
-<!DOCTYPE html>
 <html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-</body>
+    <head>
+        <title>Brian Yu: Home</title>
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <link rel="shortcut icon" type="image/x-icon" href="images/Dragon.gif" />
+        <script src="jquery.js"></script>
+    </head>
+    <script>
+        jQuery(document).ready(function(){
+            jQuery('.skillbar').each(function(){
+		      jQuery(this).find('.skillbar-bar').animate({
+                width:jQuery(this).attr('data-percent')
+		      },6000);
+	       });
+        });
+    </script>
+    <body>
+        <div id="wrapperFade">
+        <ul>
+            <li><a class="active" href="#home">Home</a></li>
+            <li><a href="#about" id="myHref">About Me</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#gaming">Gaming</a></li>
+            <br>
+            <img id="dragon" src="images/Dragon.gif" width="80%">
+            <p id="smallDescription">© Brian Yu 2017<br><br></p>
+            <p id="slightlyLargerDescription">Connect With Me!</p>
+            <a href="https://www.facebook.com/brian.yu.792">
+                <img id="logo" src="images/facebook.png" width="40%">
+            </a>
+            <a href="https://www.linkedin.com/in/brian-yu-94667012a/">
+                <img id="logo" src="images/linkedin.png" width="44%">
+            </a>
+            <a href="https://github.com/briany2/">
+                <img id="logo" src="images/github.png" width="40%">
+            </a>
+            <a href="https://twitter.com/brian_yu2">
+                <img id="logo" src="images/twitter.png" width="40%">
+            </a>
+        </ul>
+        <div id="home">
+            <img id="me" src="images/me.jpg" alt="Brian Yu" width="15%">
+            <h1 id="metag">Brian Yu</h1>
+            <p id="medescription">My name is Brian Yu, I'm currently studying at University of Illinois at Urbana-Champaign, pursuing a Bachelor's degree in computer science. This is my portfolio which showcases some of my current and past projects that I helped with. It also contains more information about the technical skills that I have.<br><br>Besides programming, I enjoy doing many activities including gaming, playing table tennis, and unicycling! I also like to play chess and compose music. <br><br> If you would like to know more about me, please contact me at briany2@illinois.edu.</p>
+        </div>
+        <div id ="moreinfo">
+            <p><br>TestTEEEEEEEEEEEEEEEEljfbgosidbnfoabndfpobapdfinpasdifnp</p>
+            <script type="text/javascript">
+                tday=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+                tmonth=new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+                function GetClock(){
+                    var d=new Date();
+                    var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getFullYear();
+                    var nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds(),ap;
+
+                    if(nhour==0){ap=" AM";nhour=12;}
+                    else if(nhour<12){ap=" AM";}
+                    else if(nhour==12){ap=" PM";}
+                    else if(nhour>12){ap=" PM";nhour-=12;}
+
+                    if(nmin<=9) nmin="0"+nmin;
+                    if(nsec<=9) nsec="0"+nsec;
+
+                    document.getElementById('clockbox').innerHTML=""+tday[nday]+", "+tmonth[nmonth]+" "+ndate+", "+nyear+" "+nhour+":"+nmin+":"+nsec+ap+"";
+                }
+                
+                window.onload=function(){
+                GetClock();
+                setInterval(GetClock,1000);
+                }
+            </script>
+            <div id="clockbox"></div>
+        </div>
+        <div id="skills">
+            <h1 id="skilltag">Programming Languages</h1>
+            <div class="skillbar clearfix " data-percent="100%">
+	           <div class="skillbar-title" style="background: #d35400;"><span>Java</span></div>
+	           <div class="skillbar-bar" style="background: #e67e22;"></div>
+	           <div class="skill-bar-percent">Proficient</div>
+            </div> <!-- End Skill Bar -->
+            
+            <div class="skillbar clearfix " data-percent="100%">
+                <div class="skillbar-title" style="background: #2c3e50;"><span>HTML5</span></div>
+                <div class="skillbar-bar" style="background: #2c3e50;"></div>
+                <div class="skill-bar-percent">Proficient</div>
+            </div> <!-- End Skill Bar -->
+                        
+            <div class="skillbar clearfix " data-percent="90%">
+                <div class="skillbar-title" style="background: #b23b00;"><span>C#</span></div>
+                <div class="skillbar-bar" style="background: #c65319;"></div>
+                <div class="skill-bar-percent">Proficient</div>
+            </div> <!-- End Skill Bar -->
+
+            <div class="skillbar clearfix " data-percent="85%">
+                <div class="skillbar-title" style="background: #2980b9;"><span>Python</span></div>
+                <div class="skillbar-bar" style="background: #3498db;"></div>
+                <div class="skill-bar-percent">Proficient</div>
+            </div> <!-- End Skill Bar -->
+
+            <div class="skillbar clearfix " data-percent="80%">
+                <div class="skillbar-title" style="background: #46465e;"><span>CSS3</span></div>
+                <div class="skillbar-bar" style="background: #5a68a5;"></div>
+                <div class="skill-bar-percent">Proficient</div>
+            </div> <!-- End Skill Bar -->
+
+            <div class="skillbar clearfix " data-percent="75%">
+                <div class="skillbar-title" style="background: #333333;"><span>JavaScript</span></div>
+                <div class="skillbar-bar" style="background: #525252;"></div>
+                <div class="skill-bar-percent">Proficient</div>
+            </div> <!-- End Skill Bar -->
+
+            <div class="skillbar clearfix " data-percent="50%">
+                <div class="skillbar-title" style="background: #27ae60;"><span>PHP</span></div>
+                <div class="skillbar-bar" style="background: #2ecc71;"></div>
+                <div class="skill-bar-percent">Familiar</div>
+            </div> <!-- End Skill Bar --> 
+        </div>
+        <div id="skills2">
+            <h1 id="skilltag">Other Programming Tools</h1>
+            <div class="skillbar clearfix " data-percent="100%">
+	           <div class="skillbar-title" style="background: red;"><span>Unity</span></div>
+	           <div class="skillbar-bar" style="background: #f44b42;"></div>
+	           <div class="skill-bar-percent">Proficient</div>
+            </div> <!-- End Skill Bar -->
+            
+            <div class="skillbar clearfix " data-percent="100%">
+                <div class="skillbar-title" style="background: #2c6613;"><span>Android</span></div>
+                <div class="skillbar-bar" style="background: #358214;"></div>
+                <div class="skill-bar-percent">Proficient</div>
+            </div> <!-- End Skill Bar -->
+                        
+            <div class="skillbar clearfix " data-percent="100%">
+                <div class="skillbar-title" style="background: #724e8c;"><span>Windows</span></div>
+                <div class="skillbar-bar" style="background: #ab50ba;"></div>
+                <div class="skill-bar-percent">Proficient</div>
+            </div> <!-- End Skill Bar -->
+
+            <div class="skillbar clearfix " data-percent="85%">
+                <div class="skillbar-title" style="background: #116187;"><span>Linux</span></div>
+                <div class="skillbar-bar" style="background: #2481ad;"></div>
+                <div class="skill-bar-percent">Proficient</div>
+            </div> <!-- End Skill Bar --> 
+            
+            <div class="skillbar clearfix " data-percent="65%">
+                <div class="skillbar-title" style="background: #8a8e08;"><span>Jquery</span></div>
+                <div class="skillbar-bar" style="background: #abaf23;"></div>
+                <div class="skill-bar-percent">Familiar</div>
+            </div> <!-- End Skill Bar -->
+            <div class="skillbar clearfix " data-percent="50%">
+                <div class="skillbar-title" style="background: #60370b;"><span>macOS</span></div>
+                <div class="skillbar-bar" style="background: #7a4914;"></div>
+                <div class="skill-bar-percent">Familiar</div>
+            </div> <!-- End Skill Bar -->
+            <div class="skillbar clearfix " data-percent="40%">
+                <div class="skillbar-title" style="background: #00a0a0;"><span>Flask</span></div>
+                <div class="skillbar-bar" style="background: #1dbaba;"></div>
+                <div class="skill-bar-percent">Familiar</div>
+            </div> <!-- End Skill Bar -->
+
+            <div class="skillbar clearfix " data-percent="40%">
+                <div class="skillbar-title" style="background: #a207ba;"><span>React</span></div>
+                <div class="skillbar-bar" style="background: #b337c6;"></div>
+                <div class="skill-bar-percent">Familiar</div>
+            </div> <!-- End Skill Bar -->
+            <a name="about">
+                <div id="about">
+                    <h2><br>About Me</h2>
+                    <p>My name is Brian Yu, and I am </p>
+                </div>
+            </a>
+            <a name="projects">
+                <div id="projects">
+                    <h2><br>About Me</h2>
+                    <p>This is </p>
+                    <h4>My Compositions</h4>
+                    <h4>My Games</h4>
+                </div>
+            </a>
+            <a name="gaming">
+                <div id="gaming">
+                    <h2><br>About Me</h2>
+                    <p>My name is Brian Yu, and I am </p>
+                </div>
+            </a>
+        </div>
+        </div>
+    </body>
 </html>
