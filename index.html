@@ -14,175 +14,371 @@
 	       });
         });
     </script>
-    <body>
+    <body onload="">
         <div id="wrapperFade">
-        <ul>
-            <li><a class="active" href="#home">Home</a></li>
-            <li><a href="#about" id="myHref">About Me</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#gaming">Gaming</a></li>
-            <br>
-            <img id="dragon" src="images/Dragon.gif" width="80%">
-            <p id="smallDescription">© Brian Yu 2017<br><br></p>
-            <p id="slightlyLargerDescription">Connect With Me!</p>
-            <a href="https://www.facebook.com/brian.yu.792">
-                <img id="logo" src="images/facebook.png" width="40%">
-            </a>
-            <a href="https://www.linkedin.com/in/brian-yu-94667012a/">
-                <img id="logo" src="images/linkedin.png" width="44%">
-            </a>
-            <a href="https://github.com/briany2/">
-                <img id="logo" src="images/github.png" width="40%">
-            </a>
-            <a href="https://twitter.com/brian_yu2">
-                <img id="logo" src="images/twitter.png" width="40%">
-            </a>
-        </ul>
-        <div id="home">
-            <img id="me" src="images/me.jpg" alt="Brian Yu" width="15%">
-            <h1 id="metag">Brian Yu</h1>
-            <p id="medescription">My name is Brian Yu, I'm currently studying at University of Illinois at Urbana-Champaign, pursuing a Bachelor's degree in computer science. This is my portfolio which showcases some of my current and past projects that I helped with. It also contains more information about the technical skills that I have.<br><br>Besides programming, I enjoy doing many activities including gaming, playing table tennis, and unicycling! I also like to play chess and compose music. <br><br> If you would like to know more about me, please contact me at briany2@illinois.edu.</p>
-        </div>
-        <div id ="moreinfo">
-            <p><br>TestTEEEEEEEEEEEEEEEEljfbgosidbnfoabndfpobapdfinpasdifnp</p>
-            <script type="text/javascript">
-                tday=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
-                tmonth=new Array("January","February","March","April","May","June","July","August","September","October","November","December");
-                function GetClock(){
-                    var d=new Date();
-                    var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getFullYear();
-                    var nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds(),ap;
-
-                    if(nhour==0){ap=" AM";nhour=12;}
-                    else if(nhour<12){ap=" AM";}
-                    else if(nhour==12){ap=" PM";}
-                    else if(nhour>12){ap=" PM";nhour-=12;}
-
-                    if(nmin<=9) nmin="0"+nmin;
-                    if(nsec<=9) nsec="0"+nsec;
-
-                    document.getElementById('clockbox').innerHTML=""+tday[nday]+", "+tmonth[nmonth]+" "+ndate+", "+nyear+" "+nhour+":"+nmin+":"+nsec+ap+"";
+            <ul>
+                <li><a class="active" href="#home">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#gaming">Gaming</a></li>
+                <li>
+                    <a id="resume" href="resume/BrianYuResume.docx">Download my Resume!</a>
+                </li>
+                <img id="dragon" src="images/Dragon.gif" width="80%">
+                <p id="smallDescription">© Brian Yu 2017<br><br></p>
+                <p id="slightlyLargerDescription">Connect With Me!</p>
+                <a href="https://www.facebook.com/brian.yu.792">
+                    <img id="logo" src="images/facebook.png" width="40%">
+                </a>
+                <a href="https://www.linkedin.com/in/brian-yu-94667012a/">
+                    <img id="logo" src="images/linkedin.png" width="44%">
+                </a>
+                <a href="https://github.com/briany2/">
+                    <img id="logo" src="images/github.png" width="40%">
+                </a>
+                <a href="https://twitter.com/brian_yu2">
+                    <img id="logo" src="images/twitter.png" width="40%">
+                </a>
+                <br>
+            </ul>
+            <div id="home">
+                <img id="me" src="images/me.jpg" alt="Brian Yu" width="15%">
+                <h1 id="metag">Brian Yu</h1>
+                <p id="medescription">My name is Brian Yu, I'm currently studying at University of Illinois at Urbana-Champaign, pursuing a Bachelor's degree in computer science. This is my portfolio which showcases some of my current and past projects that I helped with. It also contains more information about the technical skills that I have.<br><br>Besides programming, I enjoy doing many activities including gaming, playing table tennis, and unicycling! I also like to play chess and compose music. <br><br> If you would like to know more about me, please contact me at briany2@illinois.edu, or call me at 331-551-4986.</p>
+            </div>
+            <div id ="moreinfo">
+                <br><hr><br>
+                <span id="randomquip"></span>
+                <br><br><hr><br><br>
+                <span id="randomquip2"></span>
+                <br><br><hr><br><br>
+                <span id="randomquip3"></span>
+                <br><br><hr><br><br>            
+                <button id="btn" onclick="newFact()">Roll some random facts about me!</button>
+                <br><br>
+                <script>
+                var target = document.getElementById('randomquip');
+                var target2 = document.getElementById('randomquip2');
+                var target3 = document.getElementById('randomquip3');
+                var textarray = [
+                    'My favorite animal is a penguin! \(Hi Tux!\)',
+                    'My favorite food is rice noodle soup!',
+                    'I have reached Legend rank in Hearthstone!',
+                    'I can ride and bunny-hop on the unicycle!',
+                    'I worked at the Fermi National Accelerator Laboratory!',
+                    'I enrolled in the Illinois Mathematics and Science Academy in High School!',
+                    'I have an older brother and three younger sisters!',
+                    'I reached top 250 in the United States in the game Osu! Mania!',
+                    'I have composed 5 pieces of music!',
+                    'My favorite book series is The Lord of the Rings by J.R.R Tolkien!',
+                    'I enjoy exploring stocks!',
+                    'I beat Skyrim in 1 hour and 20 minutes!',
+                    'My favorite sport is table tennis!',
+                    'My favorite car \(currently\) is the 2017 Dodge Viper ACR!',
+                    'My favorite color is orange!',
+                    'I volunteered for 100+ hours at the Bartlett History Museum!',
+                    'I was co-captain of my high school chess team which won the state championship!',
+                    'My favorite professional athlete is Timo Boll!',
+                    'My favorite song is Tristam and Braken\'s Frame of Mind!',
+                    'I know how to play the violin and the piano!',
+                    'My favorite board game is Scrabble!',
+                    'My favorite coding language is C#!',
+                    'I am currently using an ASUS ROG Strix GL753VD-DS71 Laptop!',
+                    'I can juggle!'
+                ]
+                var i, j, k, l, m, n;
+                function newFact() {
+                    i = (Math.random() * textarray.length) | 0;
+                    while (i == l || i == m || i == n){
+                        i = (Math.random() * textarray.length) | 0;
+                    }
+                    randomquip.innerText = textarray[i];
+                    l = i;
+                    newFact2();
                 }
-                
-                window.onload=function(){
-                GetClock();
-                setInterval(GetClock,1000);
+                function newFact2(){
+                    j = (Math.random() * textarray.length) | 0;
+                    while(i == j || j == l || j == m || j == n) {
+                        j = (Math.random() * textarray.length) | 0;
+                    }
+                    randomquip2.innerText = textarray[j];
+                    m = j;
+                    newFact3();
                 }
-            </script>
-            <div id="clockbox"></div>
-        </div>
-        <div id="skills">
-            <h1 id="skilltag">Programming Languages</h1>
-            <div class="skillbar clearfix " data-percent="100%">
-	           <div class="skillbar-title" style="background: #d35400;"><span>Java</span></div>
-	           <div class="skillbar-bar" style="background: #e67e22;"></div>
-	           <div class="skill-bar-percent">Proficient</div>
-            </div> <!-- End Skill Bar -->
-            
-            <div class="skillbar clearfix " data-percent="100%">
-                <div class="skillbar-title" style="background: #2c3e50;"><span>HTML5</span></div>
-                <div class="skillbar-bar" style="background: #2c3e50;"></div>
-                <div class="skill-bar-percent">Proficient</div>
-            </div> <!-- End Skill Bar -->
-                        
-            <div class="skillbar clearfix " data-percent="90%">
-                <div class="skillbar-title" style="background: #b23b00;"><span>C#</span></div>
-                <div class="skillbar-bar" style="background: #c65319;"></div>
-                <div class="skill-bar-percent">Proficient</div>
-            </div> <!-- End Skill Bar -->
+                function newFact3(){
+                    k = (Math.random() * textarray.length) | 0;
+                    while(k == j || k == i || k == l || k == m || k == n) {
+                        k = (Math.random() * textarray.length) | 0;
+                    }
+                    n = k;
+                    randomquip3.innerText = textarray[k];
+                }
+                newFact();
+                </script>
+                <script type="text/javascript">
+                    tday=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+                    tmonth=new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+                    function GetClock(){
+                        var d=new Date();
+                        var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getFullYear();
+                        var nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds(),ap;
 
-            <div class="skillbar clearfix " data-percent="85%">
-                <div class="skillbar-title" style="background: #2980b9;"><span>Python</span></div>
-                <div class="skillbar-bar" style="background: #3498db;"></div>
-                <div class="skill-bar-percent">Proficient</div>
-            </div> <!-- End Skill Bar -->
+                        if(nhour==0){ap=" AM";nhour=12;}
+                        else if(nhour<12){ap=" AM";}
+                        else if(nhour==12){ap=" PM";}
+                        else if(nhour>12){ap=" PM";nhour-=12;}
 
-            <div class="skillbar clearfix " data-percent="80%">
-                <div class="skillbar-title" style="background: #46465e;"><span>CSS3</span></div>
-                <div class="skillbar-bar" style="background: #5a68a5;"></div>
-                <div class="skill-bar-percent">Proficient</div>
-            </div> <!-- End Skill Bar -->
+                        if(nmin<=9) nmin="0"+nmin;
+                        if(nsec<=9) nsec="0"+nsec;
 
-            <div class="skillbar clearfix " data-percent="75%">
-                <div class="skillbar-title" style="background: #333333;"><span>JavaScript</span></div>
-                <div class="skillbar-bar" style="background: #525252;"></div>
-                <div class="skill-bar-percent">Proficient</div>
-            </div> <!-- End Skill Bar -->
+                        document.getElementById('clockbox').innerHTML=""+tday[nday]+", "+tmonth[nmonth]+" "+ndate+", "+nyear+" "+nhour+":"+nmin+":"+nsec+ap+"";
+                    }
 
-            <div class="skillbar clearfix " data-percent="50%">
-                <div class="skillbar-title" style="background: #27ae60;"><span>PHP</span></div>
-                <div class="skillbar-bar" style="background: #2ecc71;"></div>
-                <div class="skill-bar-percent">Familiar</div>
-            </div> <!-- End Skill Bar --> 
-        </div>
-        <div id="skills2">
-            <h1 id="skilltag">Other Programming Tools</h1>
-            <div class="skillbar clearfix " data-percent="100%">
-	           <div class="skillbar-title" style="background: red;"><span>Unity</span></div>
-	           <div class="skillbar-bar" style="background: #f44b42;"></div>
-	           <div class="skill-bar-percent">Proficient</div>
-            </div> <!-- End Skill Bar -->
-            
-            <div class="skillbar clearfix " data-percent="100%">
-                <div class="skillbar-title" style="background: #2c6613;"><span>Android</span></div>
-                <div class="skillbar-bar" style="background: #358214;"></div>
-                <div class="skill-bar-percent">Proficient</div>
-            </div> <!-- End Skill Bar -->
-                        
-            <div class="skillbar clearfix " data-percent="100%">
-                <div class="skillbar-title" style="background: #724e8c;"><span>Windows</span></div>
-                <div class="skillbar-bar" style="background: #ab50ba;"></div>
-                <div class="skill-bar-percent">Proficient</div>
-            </div> <!-- End Skill Bar -->
+                    window.onload=function(){
+                    GetClock();
+                    setInterval(GetClock,1000);
+                    }
+                </script>
+                <div id="clockbox"></div>
+            </div>
+            <div id="skills">
+                <h1 id="skilltag">Programming Languages</h1>
+                <div class="skillbar clearfix " data-percent="100%">
+                   <div class="skillbar-title" style="background: #d35400;"><span>Java</span></div>
+                   <div class="skillbar-bar" style="background: #e67e22;"></div>
+                   <div class="skill-bar-percent">Proficient</div>
+                </div> <!-- End Skill Bar -->
 
-            <div class="skillbar clearfix " data-percent="85%">
-                <div class="skillbar-title" style="background: #116187;"><span>Linux</span></div>
-                <div class="skillbar-bar" style="background: #2481ad;"></div>
-                <div class="skill-bar-percent">Proficient</div>
-            </div> <!-- End Skill Bar --> 
-            
-            <div class="skillbar clearfix " data-percent="65%">
-                <div class="skillbar-title" style="background: #8a8e08;"><span>Jquery</span></div>
-                <div class="skillbar-bar" style="background: #abaf23;"></div>
-                <div class="skill-bar-percent">Familiar</div>
-            </div> <!-- End Skill Bar -->
-            <div class="skillbar clearfix " data-percent="50%">
-                <div class="skillbar-title" style="background: #60370b;"><span>macOS</span></div>
-                <div class="skillbar-bar" style="background: #7a4914;"></div>
-                <div class="skill-bar-percent">Familiar</div>
-            </div> <!-- End Skill Bar -->
-            <div class="skillbar clearfix " data-percent="40%">
-                <div class="skillbar-title" style="background: #00a0a0;"><span>Flask</span></div>
-                <div class="skillbar-bar" style="background: #1dbaba;"></div>
-                <div class="skill-bar-percent">Familiar</div>
-            </div> <!-- End Skill Bar -->
+                <div class="skillbar clearfix " data-percent="100%">
+                    <div class="skillbar-title" style="background: #2c3e50;"><span>HTML5</span></div>
+                    <div class="skillbar-bar" style="background: #2c3e50;"></div>
+                    <div class="skill-bar-percent">Proficient</div>
+                </div> <!-- End Skill Bar -->
 
-            <div class="skillbar clearfix " data-percent="40%">
-                <div class="skillbar-title" style="background: #a207ba;"><span>React</span></div>
-                <div class="skillbar-bar" style="background: #b337c6;"></div>
-                <div class="skill-bar-percent">Familiar</div>
-            </div> <!-- End Skill Bar -->
-            <a name="about">
-                <div id="about">
-                    <h2><br>About Me</h2>
-                    <p>My name is Brian Yu, and I am </p>
-                </div>
-            </a>
-            <a name="projects">
-                <div id="projects">
-                    <h2><br>About Me</h2>
-                    <p>This is </p>
-                    <h4>My Compositions</h4>
-                    <h4>My Games</h4>
-                </div>
-            </a>
-            <a name="gaming">
-                <div id="gaming">
-                    <h2><br>About Me</h2>
-                    <p>My name is Brian Yu, and I am </p>
-                </div>
-            </a>
-        </div>
+                <div class="skillbar clearfix " data-percent="90%">
+                    <div class="skillbar-title" style="background: #b23b00;"><span>C#</span></div>
+                    <div class="skillbar-bar" style="background: #c65319;"></div>
+                    <div class="skill-bar-percent">Proficient</div>
+                </div> <!-- End Skill Bar -->
+
+                <div class="skillbar clearfix " data-percent="85%">
+                    <div class="skillbar-title" style="background: #2980b9;"><span>Python</span></div>
+                    <div class="skillbar-bar" style="background: #3498db;"></div>
+                    <div class="skill-bar-percent">Proficient</div>
+                </div> <!-- End Skill Bar -->
+
+                <div class="skillbar clearfix " data-percent="80%">
+                    <div class="skillbar-title" style="background: #46465e;"><span>CSS3</span></div>
+                    <div class="skillbar-bar" style="background: #5a68a5;"></div>
+                    <div class="skill-bar-percent">Proficient</div>
+                </div> <!-- End Skill Bar -->
+
+                <div class="skillbar clearfix " data-percent="75%">
+                    <div class="skillbar-title" style="background: #333333;"><span>JavaScript</span></div>
+                    <div class="skillbar-bar" style="background: #525252;"></div>
+                    <div class="skill-bar-percent">Proficient</div>
+                </div> <!-- End Skill Bar -->
+
+                <div class="skillbar clearfix " data-percent="50%">
+                    <div class="skillbar-title" style="background: #27ae60;"><span>PHP</span></div>
+                    <div class="skillbar-bar" style="background: #2ecc71;"></div>
+                    <div class="skill-bar-percent">Familiar</div>
+                </div> <!-- End Skill Bar --> 
+            </div>
+            <div id="skills2">
+                <h1 id="skilltag">Other Programming Tools</h1>
+                <div class="skillbar clearfix " data-percent="100%">
+                   <div class="skillbar-title" style="background: red;"><span>Unity</span></div>
+                   <div class="skillbar-bar" style="background: #f44b42;"></div>
+                   <div class="skill-bar-percent">Proficient</div>
+                </div> <!-- End Skill Bar -->
+
+                <div class="skillbar clearfix " data-percent="100%">
+                    <div class="skillbar-title" style="background: #2c6613;"><span>Android</span></div>
+                    <div class="skillbar-bar" style="background: #358214;"></div>
+                    <div class="skill-bar-percent">Proficient</div>
+                </div> <!-- End Skill Bar -->
+
+                <div class="skillbar clearfix " data-percent="100%">
+                    <div class="skillbar-title" style="background: #724e8c;"><span>Windows</span></div>
+                    <div class="skillbar-bar" style="background: #ab50ba;"></div>
+                    <div class="skill-bar-percent">Proficient</div>
+                </div> <!-- End Skill Bar -->
+
+                <div class="skillbar clearfix " data-percent="85%">
+                    <div class="skillbar-title" style="background: #116187;"><span>Linux</span></div>
+                    <div class="skillbar-bar" style="background: #2481ad;"></div>
+                    <div class="skill-bar-percent">Proficient</div>
+                </div> <!-- End Skill Bar --> 
+
+                <div class="skillbar clearfix " data-percent="65%">
+                    <div class="skillbar-title" style="background: #8a8e08;"><span>Jquery</span></div>
+                    <div class="skillbar-bar" style="background: #abaf23;"></div>
+                    <div class="skill-bar-percent">Familiar</div>
+                </div> <!-- End Skill Bar -->
+                <div class="skillbar clearfix " data-percent="50%">
+                    <div class="skillbar-title" style="background: #60370b;"><span>macOS</span></div>
+                    <div class="skillbar-bar" style="background: #7a4914;"></div>
+                    <div class="skill-bar-percent">Familiar</div>
+                </div> <!-- End Skill Bar -->
+                <div class="skillbar clearfix " data-percent="40%">
+                    <div class="skillbar-title" style="background: #00a0a0;"><span>Flask</span></div>
+                    <div class="skillbar-bar" style="background: #1dbaba;"></div>
+                    <div class="skill-bar-percent">Familiar</div>
+                </div> <!-- End Skill Bar -->
+
+                <div class="skillbar clearfix " data-percent="40%">
+                    <div class="skillbar-title" style="background: #a207ba;"><span>React</span></div>
+                    <div class="skillbar-bar" style="background: #b337c6;"></div>
+                    <div class="skill-bar-percent">Familiar</div>
+                </div> <!-- End Skill Bar -->
+                <a name="projects">
+                    <div id="projects">
+                        <h2><br>My Projects</h2>
+                        <p>This section lists a few of my works that I have done.</p>
+                        <h4>My Games</h4>
+                        <p>Currently I don't have any games to list on here, but I will soon!</p>
+                        <h4>My Best Compositions</h4>
+                        <p>This is a list of my favorite songs that I wrote! These are written in <a href="https://musescore.org/en">Musescore</a>. Currently, I am learning how to use LMMS to create more music and hopefully FL Studio if I can get it!</p>
+                        <p>The Last Battle - A song I wrote last year.</p>
+                        <audio controls>
+                            <source src="songs/thelastbattle.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                        <p>The Warrior's Tale - A song I wrote 2 years ago.</p>
+                        <audio controls>
+                            <source src="songs/thewarriorstale.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                        <p>March to War - Another song I wrote 5 years ago.</p>
+                        <audio controls>
+                            <source src="songs/marchtowar.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                        <p>Solo Sonata - The first song I wrote 5 years ago.</p>
+                        <audio controls>
+                            <source src="songs/solosonata.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                        <p>You can also check <a href="https://musescore.com/sheetmusic?text=dragons4091">here</a> to see more!</p>
+                    </div>
+                </a>
+                <a name="gaming">
+                    <div id="gaming">
+                        <h2><br>Gaming</h2>
+                        <p>This section lists more information about my interest in gaming!</p>
+                        <h3>List of my favorite games and details:</h3>
+                        <ol>
+                            <li id ="gametag">League of Legends</li>
+                            <table>
+                                <tr>
+                                    <th>Summoner Name: </th>
+                                    <td>Chronos Returns</td>
+                                </tr>
+                                <tr>
+                                    <th>Highest Rank: </th>
+                                    <td>Gold V</td>
+                                </tr>
+                                <tr>
+                                    <th>Favorite Role: </th>
+                                    <td>Jungle</td>
+                                </tr>
+                                <tr>
+                                    <th>Favorite Champion: </th>
+                                    <td>Lee Sin</td>
+                                </tr>
+                                <tr>
+                                    <th>Favorite Player: </th>
+                                    <td>Dyrus</td>
+                                </tr>
+                            </table>
+                            <li id ="gametag">Hearthstone</li>
+                            <table>
+                                <tr>
+                                    <th>Battlenet ID: </th>
+                                    <td>Darius#1126</td>
+                                </tr>
+                                <tr>
+                                    <th>Highest Rank: </th>
+                                    <td>Legend #2542</td>
+                                </tr>
+                                <tr>
+                                    <th>Favorite Class: </th>
+                                    <td>Warlock</td>
+                                </tr>
+                            </table>
+                            <li id ="gametag">Osu! Mania</li>
+                            <table>
+                                <tr>
+                                    <th>Username: </th>
+                                    <td>Chronos Returns</td>
+                                </tr>
+                                <tr>
+                                    <th>Highest Rank: </th>
+                                    <td>#232 U.S, Top 5000 World</td>
+                                </tr>
+                                <tr>
+                                    <th>Favorite Beatmap: </th>
+                                    <td>Yooh - MariannE [4k Goddess]</td>
+                                </tr>
+                            </table>
+                            <li id ="gametag">Super Smash Bros. Melee</li>
+                            <table>
+                                <tr>
+                                    <th>Favorite Character: </th>
+                                    <td>Falco</td>
+                                </tr>
+                                <tr>
+                                    <th>Favorite Player: </th>
+                                    <td>S2J</td>
+                                </tr>
+                            </table>
+                            <li id ="gametag">The Elder Scrolls V: Skyrim</li>
+                            <table>
+                                <tr>
+                                    <th>Fastest Completion: </th>
+                                    <td>1:20:45</td>
+                                </tr>
+                                <tr>
+                                    <th>Favorite Character: </th>
+                                    <td>Brynjolf</td>
+                                </tr>
+                            </table>
+                            <li id ="gametag">NES Tetris</li>
+                            <table>
+                                <tr>
+                                    <th>Highest Score: </th>
+                                    <td>321,357</td>
+                                </tr>
+                                <tr>
+                                    <th>Favorite Player: </th>
+                                    <td>Jonas Neubauer</td>
+                                </tr>
+                            </table>
+                            <li id ="gametag">Halo Reach</li>
+                            <table>
+                                <tr>
+                                    <th>Favorite Mission: </th>
+                                    <td>Exodus</td>
+                                </tr>
+                            </table>
+                            <li id ="gametag">Fire Emblem Radiant Dawn</li>
+                            <table>
+                                <tr>
+                                    <th>Favorite Character: </th>
+                                    <td>Nolan</td>
+                                </tr>
+                            </table>
+                            <li id ="gametag">Soul Calibur II</li>
+                            <table>
+                                <tr>
+                                    <th>Favorite Character: </th>
+                                    <td>Astaroth</td>
+                                </tr>
+                            </table>
+                        </ol>
+                    </div>
+                </a>
+            </div>
         </div>
     </body>
 </html>
