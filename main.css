@@ -211,23 +211,16 @@ li a:hover:not(.active) {
     width: 45%;
 }
 
-#about{
-    margin-left: -26%;
-    margin-top: 150%;
-    font-family:sans-serif;
-    font-size: 15px;
-}
-
 #projects{
     margin-top: 300%;
-    margin-left: -26%;
+    margin-left: -25%;
     font-family:sans-serif;
     font-size: 15px;
 }
 
 #gaming{
     margin-top: 450%;
-    margin-left: -26%;
+    margin-left: -25%;
     font-family:sans-serif;
     font-size: 15px;
     height: 1000px;
@@ -249,7 +242,7 @@ li a:hover:not(.active) {
 }
 
 ol {
-   list-style-type: none;
+    list-style-type: none;
 }
 
 th {
@@ -257,11 +250,12 @@ th {
 }
 
 table {
+    font-size: 90%;
     margin-top: 7px;
     margin-bottom: 7px;
     padding-left:3em;
 }
 
 #gametag{
-    font-size: 20px;
+    font-size: 120%;
 }
