@@ -226,6 +226,15 @@ li a:hover:not(.active) {
     height: 1000px;
 }
 
+
+#gaming2{
+    margin-left: -12%;
+    margin-top: -24%;
+    font-family:sans-serif;
+    font-size: 15px;
+    height: 1000px;
+}
+
 #moreinfo{
     text-align: center;
 }
